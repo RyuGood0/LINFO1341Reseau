@@ -19,6 +19,12 @@ LINFO1115-synthese.pdf est le fichier test pour upload/download
 - Premier packet shadow drive: 1412
 - Packet drive download: 7312
 
+- Upload start: 1875
+- Upload end: 7032
+
+- Download start: 7352
+- Download end: 10021
+
 # Questions énoncées
 
 ## DNS
