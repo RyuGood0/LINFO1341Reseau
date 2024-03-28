@@ -18,6 +18,7 @@ LINFO1115-synthese.pdf est le fichier test pour upload/download
 - Packet auth: 779
 - Premier packet shadow drive: 1412
 - Packet drive download: 7312
+- Packet certificats : 1434
 
 #
 
@@ -53,6 +54,8 @@ LINFO1115-synthese.pdf est le fichier test pour upload/download
 - Toutes les deux récursives
 
 ### Lorsqu’une requête DNS souhaite obtenir une adresse IP, quelle est sa famille ? Il y a-t-il une version IP préférée par l’application ?
+
+- 2 requêtes sont envoyées, une pour ipv4 et une pour ipv6, mais seul la ipv4 reçoit une réponse, donc la communication se fait dessus
 
 ### Les requêtes contiennent elles des records additionnels ? Le cas échéant, à quoi servent-ils ?
 
@@ -95,7 +98,8 @@ LINFO1115-synthese.pdf est le fichier test pour upload/download
 ### Lorsque vous pouvez observer l’établissement du chiffrement, quels sont les algorithmes de chiffrement utilisés ?
 
 - rsa_pss_rsae_sha256 pour les certificats
-- TLS_AES_128_GCM_SHA256 pour le chiffrement TLS
+- Cipher suite: TLS_AES_128_GCM_SHA256 pour le chiffrement TLS sur le site
+- Cipher suite: TLS_AES_256_GCM_SHA384 pour le chiffrement TLS sur l'app
 
 ### Si vous observez du trafic UDP, semble-t-il chiffré ? Comment est-il sécurisé ?
 
