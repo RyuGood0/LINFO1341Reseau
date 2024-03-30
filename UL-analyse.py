@@ -1,7 +1,8 @@
 import pyshark, os
 
-CAPTURE_PATH = 'captures/ShadowWIFI-Login-Upload-Download.pcap'
-override_prefs={'tls.keylog_file': os.path.abspath('keys/ShadowWIFI-Login-Upload-Download')}
+CAPTURE_PATH = 'captures/Shadow4G-App-Upload.pcap'
+#override_prefs={'tls.keylog_file': os.path.abspath('keys/ShadowWIFI-Login-Upload-Download')}
+override_prefs={}
 
 cap = pyshark.FileCapture(CAPTURE_PATH, override_prefs=override_prefs, display_filter='tcp && ip.addr==46.105.132.156')
 
@@ -9,16 +10,16 @@ packet_sizes = []
 
 record = False
 for packet in cap:
-    if packet.ip.src != "192.168.1.34": continue
+    if packet.ip.src != "192.168.125.224": continue
     
     # get packet with SEQ 2462
-    if packet.tcp.seq == "2462":
+    if packet.tcp.seq == "10134":
         record = True
 
     if record:
         packet_sizes.append(int(packet.length))
 
-    if packet.tcp.seq == "4901342":
+    if packet.tcp.seq == "283778":
         break
 
 # print avg, uniques, total

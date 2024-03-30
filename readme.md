@@ -49,6 +49,8 @@ LINFO1115-synthese.pdf est le fichier test pour upload/download
 
 ### À quelles entreprises appartiennent les noms de domaines résolus ? Il y en a-t-il d’autres que celle qui détient l’application ?
 
+- Cloudflare
+
 ### Quels sont les types de requête DNS effectuées ?
 
 - Toutes les deux récursives
@@ -79,6 +81,8 @@ LINFO1115-synthese.pdf est le fichier test pour upload/download
 
 ### Lorsque vous observez du trafic UDP, identifiez-vous d’autres protocoles que QUIC et DNS ? Expliquez comment ils sont utilisés par l’application.
 
+- Non
+
 ## Chiffrement et sécurité
 
 ### L’utilisation du DNS est-elle sécurisée ? Comment ?
@@ -108,6 +112,12 @@ LINFO1115-synthese.pdf est le fichier test pour upload/download
 ### Quels comportements observer-vous lors du transfert de nouveaux fichiers comparé à la modification de fichiers existant ? Quel impact a la modification par plusieurs utilisateurs par rapport à un seul ?
 
 ### Quel est le volume de données échangées par l’application pour chacune de ces fonctionnalités ? Utilisez une base appropriée permettant la comparaison (par ex. par minute).
+
+- Upload site wifi : 40.028511 -> 41.148425 = 1.119914s pour 4886979 bytes repartis en 3403 packets avec un payload de 1440 bytes = 4583584.09664 bytes/s
+- Download site wifi : 50.785856 -> 51.399411 = 0.613555s pour 4886979 bytes repartis en 1502 packets avec des payloads variant de 1440 à 12960 = 8151719.07979 bytes/s
+- Upload app wifi : 0.272820 -> 0.353642 = 0.080822s pour 275703 bytes repartis en 192 packets avec un payload de 1440 bytes = 3582390.93316 bytes/s
+- Download app wifi : 13.382106 -> 15.064120 = 1.682014s pour 4886979 bytes repartis en 1208 packets avec des payloads variant de 1440 à 12960 = 2957064.56664 bytes/s
+- Upload site 4G : 8.575866 -> 12.253166 = 3.6773s pour 275703 bytes repartis en 204 packets avec un payload de 1348 bytes = 78553.2863786 bytes/s
 
 ### Il y a-t-il des serveurs relais utilisés pour interagir avec un utilisateur ou les applications communiquent-elles directement ? Observez-vous autre chose lorsque deux utilisateurs sont sur le même réseau Wi-Fi ?
 
