@@ -61,6 +61,14 @@ LINFO1115-synthese.pdf est le fichier test pour upload/download
 
 ### Les requêtes contiennent elles des records additionnels ? Le cas échéant, à quoi servent-ils ?
 
+Sur l'App:
+- Pour les requêtes AAAA, le TTL est de 1030s (17 minutes 10 secondes)
+- Pour les requêtes A, le TTL est de 30s
+
+Sur le site:
+- Pour les requêtes AAAA, le TTL est de 173
+- Pour les requêtes A, le TTL est de 54 ou même 42 (<1 minute)
+
 ### Observez-vous des comportements DNS inattendus ?
 
 ## Couche transport

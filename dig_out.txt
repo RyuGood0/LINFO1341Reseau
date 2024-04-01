@@ -25,3 +25,34 @@ zeus.ns.cloudflare.com. 56511   IN      A       108.162.193.249
 candy.ns.cloudflare.com. 66331  IN      A       173.245.58.79
 candy.ns.cloudflare.com. 66331  IN      A       108.162.192.79
 candy.ns.cloudflare.com. 66331  IN      A       172.64.32.79
+
+
+
+
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;drive.shadow.tech.             IN      A
+
+;; ANSWER SECTION:
+drive.shadow.tech.      139     IN      A       46.105.132.156
+drive.shadow.tech.      139     IN      A       46.105.132.157
+
+;; AUTHORITY SECTION:
+shadow.tech.            139     IN      NS      candy.ns.cloudflare.com.
+shadow.tech.            139     IN      NS      zeus.ns.cloudflare.com.
+
+;; ADDITIONAL SECTION:
+zeus.ns.cloudflare.com. 139     IN      AAAA    2803:f800:50::6ca2:c1f9
+candy.ns.cloudflare.com. 139    IN      AAAA    2803:f800:50::6ca2:c04f
+zeus.ns.cloudflare.com. 139     IN      A       108.162.193.249
+zeus.ns.cloudflare.com. 139     IN      AAAA    2606:4700:58::adf5:3bf9
+zeus.ns.cloudflare.com. 139     IN      A       172.64.33.249
+candy.ns.cloudflare.com. 139    IN      A       172.64.32.79
+candy.ns.cloudflare.com. 139    IN      A       173.245.58.79
+zeus.ns.cloudflare.com. 139     IN      AAAA    2a06:98c1:50::ac40:21f9
+candy.ns.cloudflare.com. 139    IN      A       108.162.192.79
+candy.ns.cloudflare.com. 139    IN      AAAA    2606:4700:50::adf5:3a4f
+zeus.ns.cloudflare.com. 139     IN      A       173.245.59.249
+candy.ns.cloudflare.com. 139    IN      AAAA    2a06:98c1:50::ac40:204f
